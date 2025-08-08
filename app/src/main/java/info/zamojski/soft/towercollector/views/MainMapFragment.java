@@ -52,6 +52,7 @@ import org.osmdroid.tileprovider.tilesource.OnlineTileSourceBase;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.BoundingBox;
 import org.osmdroid.util.GeoPoint;
+import org.osmdroid.util.MapTileIndex;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.Marker;
 import org.osmdroid.views.overlay.ScaleBarOverlay;
@@ -87,7 +88,26 @@ public class MainMapFragment extends MainFragmentBase implements FollowMyLocatio
     private static final int MAX_MARKERS_ADDED_INDIVIDUALLY = 500;
     private static final float BOUNDARIES_INCREASE_FACTOR = 1.2f; // 10% more each side
 
-    public static final OnlineTileSourceBase TILE_SOURCE = TileSourceFactory.MAPNIK;
+    public static final OnlineTileSourceBase TILE_SOURCE = new OnlineTileSourceBase(
+            "T0stTiles",
+            0,
+            16,
+            512,
+            "",
+            new String[]{"https://t0stbrot.net/api/public/tiles/"}
+    ) {
+        /**
+         * @param pMapTileIndex
+         * @return
+         */
+        @Override
+        public String getTileURLString(long pMapTileIndex) {
+            return "https://t0stbrot.net/api/public/tiles/"
+                    + MapTileIndex.getZoom(pMapTileIndex) + "/"
+                    + MapTileIndex.getX(pMapTileIndex) + "/"
+                    + MapTileIndex.getY(pMapTileIndex);
+        }
+    };
 
     private MapView mainMapView;
     private FollowMyLocationOverlay myLocationOverlay;
