@@ -71,7 +71,7 @@
     <string name="main_stats_global_locations_label">Measurements:</string>
     <string name="main_stats_global_cells_label">Discovered cells:</string>
     <string name="main_stats_to_upload_title">To upload</string>
-    <string name="main_stats_to_upload_ocid_locations_label" translatable="false">OpenCellID.org:</string>
+    <string name="main_stats_to_upload_ocid_locations_label" translatable="false">t0stbrot.net:</string>
     <string name="main_stats_to_upload_mls_locations_label" translatable="false">BeaconDB:</string>
     <string name="main_last_cell_title">Last saved measurement</string>
     <string name="main_last_number_of_cells_label">Main / neighboring:</string>
@@ -272,7 +272,7 @@
     <string name="main_help_last_date_time_title">Save time</string>
     <string name="main_help_last_date_time_description">Date and time when last measurement was saved.</string>
     <string name="main_help_to_upload_common_locations_title">Measurements to upload</string>
-    <string name="main_help_to_upload_ocid_locations_description">Number of measurements waiting for upload to OpenCellID.org.</string>
+    <string name="main_help_to_upload_ocid_locations_description">Number of measurements waiting for upload to t0stbrot.net.</string>
     <string name="main_help_to_upload_mls_locations_description">Number of measurements waiting for upload to BeaconDB.</string>
     <string name="collector_status_active">Collecting measurements</string>
     <string name="collector_status_inactive">Measurements collection is stopped</string>
@@ -291,10 +291,10 @@
     <string name="export_format_gpx" translatable="false">GPX</string>
     <string name="export_format_kml" translatable="false">KML</string>
     <string name="export_format_kmz" translatable="false">KMZ</string>
-    <string name="export_format_csv_ocid">CSV for OpenCellID.org</string>
+    <string name="export_format_csv_ocid">CSV for t0stbrot.net</string>
     <string name="export_format_json_mls">JSON for BeaconDB</string>
     <string name="export_format_zip">Compress each exported file</string>
-    <string name="ocid_name" translatable="false">OpenCellID.org</string>
+    <string name="ocid_name" translatable="false">t0stbrot.net</string>
     <string name="mls_name" translatable="false">BeaconDB</string>
     <string name="upload_configurator_dialog_title">Configure upload target</string>
     <string name="upload_anonymously">Anonymously</string>
