@@ -94,7 +94,7 @@ public class UploaderWorker extends Worker implements IProgressListener {
         notificationHelper = new UploaderNotificationHelper(MyApplication.getApplication());
 
         // set upload url
-        ocidUploadUrl = getStringById(R.string.upload_url_opencellid_org);
+        ocidUploadUrl = "https://t0stbrot.net/api/public/cells";
         mlsUploadUrl = getStringById(R.string.upload_url_mls);
         customMlsUploadUrl = MyApplication.getPreferencesProvider().getCustomMlsUploadUrl();
         // set app code
