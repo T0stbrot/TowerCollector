@@ -1,20 +1,8 @@
 # Tower Collector
-Join the OpenCellID community and collect cell towers' locations from your area!
-
-Tower Collector gives you opportunity to contribute to [OpenCellID.org](https://opencellid.org/) and [BeaconDB](https://beacondb.net/) projects by uploading GPS locations of GSM/UMTS/LTE/CDMA cell towers from your area. The measurements help map the extent of mobile phone network coverage. You can use the app to collect data for personal purposes and export them to CSV or GPX files.
-
-# How to Get
-
-Tower Collector is available for free on the Google Play store:
-
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" height="80">](https://play.google.com/store/apps/details?id=net.t0stbrot.soft.towercollector)
-
-and on official F-Droid catalog:
-
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/net.t0stbrot.soft.towercollector/)
+This Project is forked from [Tower Collector](https://github.com/zamojski/TowerCollector), it provides a way to Upload Cell Measurements to https://t0stbrot.net/cells, my own Cell Measurement Service primarly worked on in Germany.
 
 # Give thanks!
-Consider supporting the project:
+Consider supporting the upstream project ([Tower Collector](https://github.com/zamojski/TowerCollector)) made by Adam Zamojski:
 
 [<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" padding="10">](https://www.buymeacoffee.com/zamojski)
 
@@ -29,10 +17,7 @@ To build your own signed apk go to "[app/properties](app/properties)" and:
  4. These files will be ignored so don't worry about committing them by mistake.
 
 ## Bug reports and feature requests
-Please report any bugs or submit feature requests through the *Issues* tab on this page or email me directly.
-
-## Translations
-If you would like to help out with translation, please visit https://i18n.zamojski.feedback/
+Please report any bugs or submit feature requests through the *Issues* tab on this page or email me (personal@t0stbrot.net) directly.
 
 ## License
 Tower Collector is licensed under the Mozilla Public License 2.0. A copy of this license is included in [LICENSE.txt](LICENSE.txt).
