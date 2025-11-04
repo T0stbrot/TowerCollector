@@ -7,14 +7,14 @@
     <PreferenceCategory
         app:key="@string/preferences_advanced_category_settings_key"
         app:title="@string/preferences_category_settings_title">
-        <info.zamojski.soft.towercollector.controls.HtmlSummaryListPreference
+        <net.t0stbrot.soft.towercollector.controls.HtmlSummaryListPreference
             app:defaultValue="@string/preferences_collector_api_version_default_value"
             app:entries="@array/preferences_collector_api_version_entries_labels"
             app:entryValues="@array/preferences_collector_api_version_entries_values"
             app:key="@string/preferences_collector_api_version_key"
             app:summary="@string/preferences_collector_api_version_summary"
             app:title="@string/preferences_collector_api_version_title" />
-        <info.zamojski.soft.towercollector.controls.HtmlSummaryListPreference
+        <net.t0stbrot.soft.towercollector.controls.HtmlSummaryListPreference
             app:defaultValue="@string/preferences_file_logging_level_default_value"
             app:entries="@array/preferences_file_logging_level_entries_labels"
             app:entryValues="@array/preferences_file_logging_level_entries_values"

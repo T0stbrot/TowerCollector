@@ -25,7 +25,7 @@
             android:padding="@dimen/padding_small"
             android:text="@string/battery_optimizations"
             android:textColor="@color/text_light"
-            tools:context=".MainActivity"/>
+            tools:context="net.t0stbrot.soft.towercollector.MainActivity"/>
     </TableRow>
 
 </TableLayout>

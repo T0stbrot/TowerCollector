@@ -10,7 +10,7 @@
         android:shortcutShortLabel="@string/shortcut_collecting_toggle_short">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="info.zamojski.soft.towercollector.SplashActivity"
+            android:targetClass="net.t0stbrot.soft.towercollector.SplashActivity"
             android:targetPackage="info.zamojski.soft.towercollector">
             <extra
                 android:name="shortcut_action"
@@ -28,7 +28,7 @@
         android:shortcutShortLabel="@string/shortcut_upload_toggle_short">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="info.zamojski.soft.towercollector.SplashActivity"
+            android:targetClass="net.t0stbrot.soft.towercollector.SplashActivity"
             android:targetPackage="info.zamojski.soft.towercollector">
             <extra
                 android:name="shortcut_action"
@@ -46,7 +46,7 @@
         android:shortcutShortLabel="@string/shortcut_export_toggle_short">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="info.zamojski.soft.towercollector.SplashActivity"
+            android:targetClass="net.t0stbrot.soft.towercollector.SplashActivity"
             android:targetPackage="info.zamojski.soft.towercollector">
             <extra
                 android:name="shortcut_action"

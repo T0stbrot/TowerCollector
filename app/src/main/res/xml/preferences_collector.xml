@@ -26,7 +26,7 @@
             app:summaryOn="@string/preferences_notify_measurements_collected_on_summary"
             app:title="@string/preferences_notify_measurements_collected_title" />
 
-        <info.zamojski.soft.towercollector.controls.HtmlSummaryListPreference
+        <net.t0stbrot.soft.towercollector.controls.HtmlSummaryListPreference
             app:defaultValue="@string/preferences_collector_keep_screen_on_mode_default_value"
             app:entries="@array/preferences_keep_screen_on_mode_entries_labels"
             app:entryValues="@array/preferences_keep_screen_on_mode_entries_values"
@@ -55,7 +55,7 @@
             app:summaryOn="@string/preferences_start_collector_at_boot_on_summary"
             app:title="@string/preferences_start_collector_at_boot_title" />
 
-        <info.zamojski.soft.towercollector.controls.HtmlSummaryListPreference
+        <net.t0stbrot.soft.towercollector.controls.HtmlSummaryListPreference
             app:defaultValue="@string/preferences_collector_low_battery_action_default_value"
             app:entries="@array/preferences_collector_low_battery_action_entries_labels"
             app:entryValues="@array/preferences_collector_low_battery_action_entries_values"

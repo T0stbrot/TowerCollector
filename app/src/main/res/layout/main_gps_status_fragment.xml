@@ -24,7 +24,7 @@
             android:padding="@dimen/padding_small"
             android:text="@string/main_gps_status_label"
             android:textColor="@color/text_light"
-            tools:context=".MainActivity" />
+            tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
         <TextView
             android:id="@+id/main_gps_status_value_textview"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_small"
             android:textColor="@color/text_light"
-            tools:context=".MainActivity"
+            tools:context="net.t0stbrot.soft.towercollector.MainActivity"
             tools:text="@string/status_initializing" />
     </TableRow>
 

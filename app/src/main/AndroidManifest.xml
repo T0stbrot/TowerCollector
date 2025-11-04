@@ -38,7 +38,7 @@
         android:required="true" />
 
     <application
-        android:name="info.zamojski.soft.towercollector.MyApplication"
+        android:name="info.zamojski.soft.towercollector.net.zamojski.soft.towercollector.MyApplication"
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -49,7 +49,7 @@
         android:theme="@style/DefaultSplashScreenAppTheme">
 
         <activity
-            android:name=".SplashActivity"
+            android:name="net.t0stbrot.soft.towercollector.SplashActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
@@ -61,7 +61,7 @@
                 android:resource="@xml/shortcuts" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="net.t0stbrot.soft.towercollector.MainActivity"
             android:exported="false"
             android:label="@string/app_name"
             android:launchMode="singleTop">
@@ -70,23 +70,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PreferencesActivity"
+            android:name="net.t0stbrot.soft.towercollector.PreferencesActivity"
             android:exported="false"
             android:label="@string/app_title_preferences"
-            android:parentActivityName="info.zamojski.soft.towercollector.MainActivity">
+            android:parentActivityName="info.zamojski.soft.towercollector.net.zamojski.soft.towercollector.MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="info.zamojski.soft.towercollector.MainActivity" />
+                android:value="info.zamojski.soft.towercollector.net.zamojski.soft.towercollector.MainActivity" />
         </activity>
 
         <service
-            android:name=".CollectorService"
+            android:name="net.t0stbrot.soft.towercollector.CollectorService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="location" />
         <service
-            android:name=".CollectorQuickSettingsTileService"
+            android:name="net.t0stbrot.soft.towercollector.CollectorQuickSettingsTileService"
             android:enabled="true"
             android:exported="true"
             android:icon="@drawable/ic_quicksettings_collector_start"
@@ -101,7 +101,7 @@
                 android:value="true" />
         </service>
         <service
-            android:name=".UploaderQuickSettingsTileService"
+            android:name="net.t0stbrot.soft.towercollector.UploaderQuickSettingsTileService"
             android:enabled="true"
             android:exported="true"
             android:icon="@drawable/ic_quicksettings_uploader_start"
@@ -116,7 +116,7 @@
                 android:value="true" />
         </service>
         <service
-            android:name=".ExportQuickSettingsTileService"
+            android:name="net.t0stbrot.soft.towercollector.ExportQuickSettingsTileService"
             android:enabled="true"
             android:exported="true"
             android:icon="@drawable/ic_quicksettings_export_start"
@@ -136,7 +136,7 @@
             tools:node="merge" />
 
         <receiver
-            android:name=".broadcast.ExternalBroadcastReceiver"
+            android:name="net.t0stbrot.soft.towercollector.broadcast.ExternalBroadcastReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>

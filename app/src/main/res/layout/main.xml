@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:textDirection="locale"
-    tools:context=".MainActivity">
+    tools:context="net.t0stbrot.soft.towercollector.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             app:tabIndicator="@drawable/background_tab_indicator_height" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <info.zamojski.soft.towercollector.controls.NonSwipeableViewPager
+    <net.t0stbrot.soft.towercollector.controls.NonSwipeableViewPager
         android:id="@+id/main_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

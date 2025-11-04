@@ -10,7 +10,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     android:textDirection="locale"
-    tools:context=".MainActivity">
+    tools:context="net.t0stbrot.soft.towercollector.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

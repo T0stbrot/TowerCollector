@@ -36,7 +36,7 @@
                 android:padding="@dimen/padding_small"
                 android:text="@string/main_stats_today_title"
                 android:textStyle="bold"
-                tools:context=".MainActivity" />
+                tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -66,14 +66,14 @@
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
                             android:text="@string/main_stats_locations_label"
-                            tools:context=".MainActivity" />
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
                         <TextView
                             android:id="@+id/main_stats_today_locations_value_textview"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
-                            tools:context=".MainActivity"
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity"
                             tools:text="12" />
                     </TableRow>
 
@@ -91,14 +91,14 @@
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
                             android:text="@string/main_stats_cells_label"
-                            tools:context=".MainActivity" />
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
                         <TextView
                             android:id="@+id/main_stats_today_cells_value_textview"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
-                            tools:context=".MainActivity"
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity"
                             tools:text="1 (0)" />
                     </TableRow>
 
@@ -113,7 +113,7 @@
                 android:padding="@dimen/padding_small"
                 android:text="@string/main_stats_local_title"
                 android:textStyle="bold"
-                tools:context=".MainActivity" />
+                tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -143,14 +143,14 @@
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
                             android:text="@string/main_stats_locations_label"
-                            tools:context=".MainActivity" />
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
                         <TextView
                             android:id="@+id/main_stats_local_locations_value_textview"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
-                            tools:context=".MainActivity"
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity"
                             tools:text="123" />
                     </TableRow>
 
@@ -168,14 +168,14 @@
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
                             android:text="@string/main_stats_cells_label"
-                            tools:context=".MainActivity" />
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
                         <TextView
                             android:id="@+id/main_stats_local_cells_value_textview"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
-                            tools:context=".MainActivity"
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity"
                             tools:text="12 (3)" />
                     </TableRow>
 
@@ -190,7 +190,7 @@
                 android:padding="@dimen/padding_small"
                 android:text="@string/main_stats_global_title"
                 android:textStyle="bold"
-                tools:context=".MainActivity" />
+                tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -220,14 +220,14 @@
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
                             android:text="@string/main_stats_global_locations_label"
-                            tools:context=".MainActivity" />
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
                         <TextView
                             android:id="@+id/main_stats_global_locations_value_textview"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
-                            tools:context=".MainActivity"
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity"
                             tools:text="123456" />
                     </TableRow>
 
@@ -245,14 +245,14 @@
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
                             android:text="@string/main_stats_global_cells_label"
-                            tools:context=".MainActivity" />
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
                         <TextView
                             android:id="@+id/main_stats_global_cells_value_textview"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
-                            tools:context=".MainActivity"
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity"
                             tools:text="1234" />
                     </TableRow>
 
@@ -267,7 +267,7 @@
                 android:padding="@dimen/padding_small"
                 android:text="@string/main_stats_to_upload_title"
                 android:textStyle="bold"
-                tools:context=".MainActivity" />
+                tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -297,14 +297,14 @@
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
                             android:text="@string/main_stats_to_upload_ocid_locations_label"
-                            tools:context=".MainActivity" />
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
                         <TextView
                             android:id="@+id/main_stats_to_upload_ocid_locations_value_textview"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
-                            tools:context=".MainActivity"
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity"
                             tools:text="12" />
                     </TableRow>
 
@@ -322,14 +322,14 @@
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
                             android:text="@string/main_stats_to_upload_mls_locations_label"
-                            tools:context=".MainActivity" />
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity" />
 
                         <TextView
                             android:id="@+id/main_stats_to_upload_mls_locations_value_textview"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/padding_small"
-                            tools:context=".MainActivity"
+                            tools:context="net.t0stbrot.soft.towercollector.MainActivity"
                             tools:text="123" />
                     </TableRow>
                 </TableLayout>

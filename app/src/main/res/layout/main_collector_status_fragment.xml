@@ -18,7 +18,7 @@
         android:paddingVertical="@dimen/padding_large"
         android:textAlignment="textStart"
         android:textColor="@color/text_light"
-        tools:context=".MainActivity"
+        tools:context="net.t0stbrot.soft.towercollector.MainActivity"
         tools:text="@string/collector_status_inactive" />
 
 </LinearLayout>
