@@ -72,7 +72,6 @@ import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import net.t0stbrot.soft.towercollector.analytics.IntentSource;
 import net.t0stbrot.soft.towercollector.broadcast.AirplaneModeBroadcastReceiver;
 import net.t0stbrot.soft.towercollector.broadcast.BatterySaverBroadcastReceiver;
 import net.t0stbrot.soft.towercollector.controls.DialogManager;
@@ -244,7 +243,6 @@ public class MainActivity extends AppCompatActivity
         EventBus.getDefault().register(this);
 
         String appThemeName = MyApplication.getPreferencesProvider().getAppTheme();
-        MyApplication.getAnalytics().sendPrefsAppTheme(appThemeName);
 
         if (isFirstStart && MyApplication.getPreferencesProvider().getStartCollectorAtStartup()) {
             isFirstStart = false;
@@ -618,7 +616,6 @@ public class MainActivity extends AppCompatActivity
                 if (disableAutoUpdateCheckCheckboxChecked) {
                     MyApplication.getPreferencesProvider().setUpdateCheckEnabled(false);
                 }
-                MyApplication.getAnalytics().sendUpdateAction(downloadLink.getLabel());
                 String[] links = downloadLink.getLinks();
                 boolean startActivityFailed = false;
                 for (String link : links) {
@@ -759,12 +756,10 @@ public class MainActivity extends AppCompatActivity
             });
         } else {
             builder.setPositiveButton(R.string.dialog_keep, (dialog, which) -> {
-                exportKeepAction();
                 dismissExportFinishedDialog(dialog);
             });
         }
         builder.setNeutralButton(R.string.dialog_upload, (dialog, which) -> {
-            MyApplication.getAnalytics().sendExportUploadAction();
             startUploaderTaskWithCheck();
         });
         builder.setNegativeButton(R.string.dialog_delete, (dialog, which) -> {
@@ -775,7 +770,6 @@ public class MainActivity extends AppCompatActivity
             deleteBuilder.setPositiveButton(R.string.dialog_ok, (positiveDialog, positiveWhich) -> {
                 MeasurementsDatabase.getInstance(MyApplication.getApplication()).deleteAllMeasurements();
                 EventBus.getDefault().post(new PrintMainWindowEvent());
-                MyApplication.getAnalytics().sendExportDeleteAction();
             });
             deleteBuilder.setNegativeButton(R.string.dialog_cancel, (negativeDialog, id) -> {
                 // cancel
@@ -840,12 +834,7 @@ public class MainActivity extends AppCompatActivity
         exportedFilePaths = null;
     }
 
-    private void exportKeepAction() {
-        MyApplication.getAnalytics().sendExportKeepAction();
-    }
-
     private void exportOpenAction() {
-        MyApplication.getAnalytics().sendExportOpenAction();
         if (exportedFilePaths == null)
             return;
         Intent openIntent = new Intent(Intent.ACTION_VIEW);
@@ -861,7 +850,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void exportShareAction() {
-        MyApplication.getAnalytics().sendExportShareAction();
         if (exportedFilePaths == null)
             return;
         ShareCompat.IntentBuilder shareIntent = new ShareCompat.IntentBuilder(this);
@@ -1736,7 +1724,6 @@ public class MainActivity extends AppCompatActivity
 
     private void checkForNewVersionAvailability() {
         boolean isAutoUpdateEnabled = MyApplication.getPreferencesProvider().getUpdateCheckEnabled();
-        MyApplication.getAnalytics().sendPrefsUpdateCheckEnabled(isAutoUpdateEnabled);
         if (isAutoUpdateEnabled) {
             long currentDate = DateUtils.getCurrentDateWithoutTime();
             long lastUpdateCheckDate = MyApplication.getPreferencesProvider().getLastUpdateCheckDate();
