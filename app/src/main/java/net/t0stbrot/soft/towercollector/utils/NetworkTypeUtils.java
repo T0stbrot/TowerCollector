@@ -11,7 +11,7 @@ import androidx.annotation.DrawableRes;
 import java.util.ArrayList;
 import java.util.List;
 
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.enums.NetworkGroup;
 
 public class NetworkTypeUtils {

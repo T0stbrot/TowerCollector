@@ -63,7 +63,7 @@ import java.util.List;
 import java.util.Locale;
 
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.controls.DialogManager;
 import net.t0stbrot.soft.towercollector.dao.MeasurementsDatabase;
 import net.t0stbrot.soft.towercollector.events.MeasurementSavedEvent;

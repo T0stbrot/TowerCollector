@@ -8,7 +8,7 @@
       "client_info": {
         "mobilesdk_app_id": "EXAMPLE",
         "android_client_info": {
-          "package_name": "info.zamojski.soft.towercollector"
+          "package_name": "net.t0stbrot.soft.towercollector"
         }
       },
       "oauth_client": [],

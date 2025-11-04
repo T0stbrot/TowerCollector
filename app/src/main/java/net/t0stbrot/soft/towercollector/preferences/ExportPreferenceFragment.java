@@ -11,7 +11,7 @@ import android.os.Bundle;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceManager;
 
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import timber.log.Timber;
 
 public class ExportPreferenceFragment extends PreferenceFragmentBase implements OnSharedPreferenceChangeListener {

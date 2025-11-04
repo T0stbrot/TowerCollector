@@ -6,7 +6,7 @@ package net.t0stbrot.soft.towercollector.providers.preferences.migration;
 
 import android.content.Context;
 
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.providers.preferences.BooleanPreferenceProvider;
 import net.t0stbrot.soft.towercollector.providers.preferences.StringPreferenceProvider;
 import net.t0stbrot.soft.towercollector.utils.StringUtils;

@@ -6,7 +6,7 @@ package net.t0stbrot.soft.towercollector.uploader;
 
 import net.t0stbrot.soft.towercollector.MainActivity;
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.broadcast.ExternalBroadcastReceiver;
 import net.t0stbrot.soft.towercollector.utils.NotificationHelperBase;
 

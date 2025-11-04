@@ -9,7 +9,7 @@ import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 import java.util.concurrent.TimeUnit;
 
-import info.zamojski.soft.towercollector.BuildConfig;
+import net.t0stbrot.soft.towercollector.BuildConfig;
 import net.t0stbrot.soft.towercollector.io.network.compatibility.ExtendedOkHttpClientBuilder;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;

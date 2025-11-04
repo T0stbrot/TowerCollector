@@ -2,10 +2,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-package info.zamojski.soft.towercollector.analytics;
+package net.t0stbrot.soft.towercollector.analytics;
 
-import info.zamojski.soft.towercollector.BuildConfig;
-import info.zamojski.soft.towercollector.MyApplication;
+import net.t0stbrot.soft.towercollector.BuildConfig;
+import net.t0stbrot.soft.towercollector.MyApplication;
 import timber.log.Timber;
 
 public class AnalyticsServiceFactory {

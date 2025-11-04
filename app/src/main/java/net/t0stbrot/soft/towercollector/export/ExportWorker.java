@@ -26,7 +26,7 @@ import java.util.List;
 
 import net.t0stbrot.soft.towercollector.ExportQuickSettingsTileService;
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.analytics.IntentSource;
 import net.t0stbrot.soft.towercollector.dao.MeasurementsDatabase;
 import net.t0stbrot.soft.towercollector.enums.FileType;

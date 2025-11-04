@@ -12,7 +12,7 @@ import java.io.OutputStreamWriter;
 import java.util.List;
 
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.dao.MeasurementsDatabase;
 import net.t0stbrot.soft.towercollector.enums.GeneratorResult;
 import net.t0stbrot.soft.towercollector.files.DeviceOperationException.Reason;

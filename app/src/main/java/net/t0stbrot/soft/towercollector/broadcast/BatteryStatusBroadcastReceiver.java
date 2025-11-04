@@ -10,7 +10,7 @@ import android.content.Intent;
 
 import net.t0stbrot.soft.towercollector.CollectorService;
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import timber.log.Timber;
 
 public class BatteryStatusBroadcastReceiver extends BroadcastReceiver {

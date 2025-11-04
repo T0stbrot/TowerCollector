@@ -10,8 +10,8 @@ import android.os.Build;
 
 import androidx.annotation.StringRes;
 
-import info.zamojski.soft.towercollector.BuildConfig;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.BuildConfig;
+import net.t0stbrot.soft.towercollector.R;
 
 public class ApkUtils {
 

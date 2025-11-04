@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.UploaderQuickSettingsTileService;
 import net.t0stbrot.soft.towercollector.analytics.IntentSource;
 import net.t0stbrot.soft.towercollector.analytics.internal.Label;

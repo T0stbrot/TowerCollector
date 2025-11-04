@@ -4,7 +4,7 @@
 
 package net.t0stbrot.soft.towercollector.providers.preferences;
 
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.enums.ExportAction;
 import net.t0stbrot.soft.towercollector.enums.FileType;
 import net.t0stbrot.soft.towercollector.utils.Cache;

@@ -6,7 +6,7 @@ package net.t0stbrot.soft.towercollector.collector;
 
 import net.t0stbrot.soft.towercollector.CollectorService;
 import net.t0stbrot.soft.towercollector.MainActivity;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.model.Measurement;
 import net.t0stbrot.soft.towercollector.model.Statistics;
 import net.t0stbrot.soft.towercollector.utils.NotificationHelperBase;

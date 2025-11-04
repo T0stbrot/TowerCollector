@@ -16,7 +16,7 @@ import org.osmdroid.tileprovider.modules.SqlTileWriter;
 import java.io.File;
 
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 
 public class MapUtils {
     public static void configureMap(Context context) {

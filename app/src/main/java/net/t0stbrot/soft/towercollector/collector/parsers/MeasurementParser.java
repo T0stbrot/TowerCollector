@@ -6,7 +6,7 @@ package net.t0stbrot.soft.towercollector.collector.parsers;
 
 import org.greenrobot.eventbus.EventBus;
 
-import info.zamojski.soft.towercollector.BuildConfig;
+import net.t0stbrot.soft.towercollector.BuildConfig;
 import net.t0stbrot.soft.towercollector.MyApplication;
 import net.t0stbrot.soft.towercollector.collector.ParseResult;
 import net.t0stbrot.soft.towercollector.collector.validators.ConditionsValidator;

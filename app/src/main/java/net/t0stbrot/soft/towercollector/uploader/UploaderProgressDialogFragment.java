@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 
 public class UploaderProgressDialogFragment extends DialogFragment {
 

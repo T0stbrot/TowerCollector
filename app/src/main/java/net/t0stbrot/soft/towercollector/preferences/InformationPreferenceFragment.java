@@ -4,9 +4,9 @@
 
 package net.t0stbrot.soft.towercollector.preferences;
 
-import info.zamojski.soft.towercollector.BuildConfig;
+import net.t0stbrot.soft.towercollector.BuildConfig;
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.utils.ApkUtils;
 import net.t0stbrot.soft.towercollector.utils.DateUtils;
 import net.t0stbrot.soft.towercollector.utils.ResourceUtils;

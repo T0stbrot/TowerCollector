@@ -5,7 +5,7 @@
 package net.t0stbrot.soft.towercollector.utils;
 
 import net.t0stbrot.soft.towercollector.CollectorService;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.export.ExportWorker;
 import net.t0stbrot.soft.towercollector.uploader.UploaderWorker;
 

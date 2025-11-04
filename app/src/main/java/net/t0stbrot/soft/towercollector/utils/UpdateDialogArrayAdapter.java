@@ -6,7 +6,7 @@ package net.t0stbrot.soft.towercollector.utils;
 
 import java.util.List;
 
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.model.UpdateInfo.DownloadLink;
 
 import android.content.Context;

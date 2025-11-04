@@ -7,5 +7,5 @@
         path="measurements.db" />
     <include
         domain="sharedpref"
-        path="info.zamojski.soft.towercollector_preferences.xml" />
+        path="net.t0stbrot.soft.towercollector_preferences.xml" />
 </full-backup-content>

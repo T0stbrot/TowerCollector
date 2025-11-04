@@ -22,7 +22,7 @@ import timber.log.Timber;
 
 public class ExternalBroadcastSender implements Runnable {
 
-    private static final String MEASUREMENTS_COLLECTED_ACTION = "info.zamojski.soft.towercollector.MEASUREMENTS_COLLECTED";
+    private static final String MEASUREMENTS_COLLECTED_ACTION = "net.t0stbrot.soft.towercollector.MEASUREMENTS_COLLECTED";
     private static final String MEASUREMENTS_EXTRA_KEY = "measurements";
 
     private IJsonFormatter formatter;

@@ -17,10 +17,10 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreferenceCompat;
 
-import info.zamojski.soft.towercollector.BuildConfig;
+import net.t0stbrot.soft.towercollector.BuildConfig;
 import net.t0stbrot.soft.towercollector.CollectorService;
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.dao.MeasurementsDatabase;
 import net.t0stbrot.soft.towercollector.dev.DatabaseOperations;
 import net.t0stbrot.soft.towercollector.dev.PreferencesOperations;

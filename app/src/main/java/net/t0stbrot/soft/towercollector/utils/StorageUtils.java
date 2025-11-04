@@ -19,7 +19,7 @@ import androidx.documentfile.provider.DocumentFile;
 import java.io.File;
 
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import timber.log.Timber;
 
 public class StorageUtils {

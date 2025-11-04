@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import androidx.preference.PreferenceFragmentCompat;
 
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 
 public class HeaderPreferenceFragment extends PreferenceFragmentCompat {
     @Override

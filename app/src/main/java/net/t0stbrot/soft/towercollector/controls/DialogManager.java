@@ -8,7 +8,7 @@ import org.sufficientlysecure.htmltextview.HtmlResImageGetter;
 import org.sufficientlysecure.htmltextview.HtmlTextView;
 import org.sufficientlysecure.htmltextview.OnClickATagListener;
 
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 
 import android.app.AlertDialog;
 import android.content.Context;

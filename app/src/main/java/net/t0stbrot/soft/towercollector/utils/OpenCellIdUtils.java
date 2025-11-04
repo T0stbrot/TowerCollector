@@ -4,7 +4,7 @@
 
 package net.t0stbrot.soft.towercollector.utils;
 
-import info.zamojski.soft.towercollector.BuildConfig;
+import net.t0stbrot.soft.towercollector.BuildConfig;
 import net.t0stbrot.soft.towercollector.MyApplication;
 
 public class OpenCellIdUtils {

@@ -7,7 +7,7 @@ package net.t0stbrot.soft.towercollector.views;
 import java.util.Date;
 
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.dao.MeasurementsDatabase;
 import net.t0stbrot.soft.towercollector.events.MeasurementSavedEvent;
 import net.t0stbrot.soft.towercollector.events.PrintMainWindowEvent;

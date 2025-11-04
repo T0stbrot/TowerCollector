@@ -7,11 +7,11 @@ Tower Collector gives you opportunity to contribute to [OpenCellID.org](https://
 
 Tower Collector is available for free on the Google Play store:
 
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" height="80">](https://play.google.com/store/apps/details?id=info.zamojski.soft.towercollector)
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" height="80">](https://play.google.com/store/apps/details?id=net.t0stbrot.soft.towercollector)
 
 and on official F-Droid catalog:
 
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/info.zamojski.soft.towercollector/)
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/net.t0stbrot.soft.towercollector/)
 
 # Give thanks!
 Consider supporting the project:

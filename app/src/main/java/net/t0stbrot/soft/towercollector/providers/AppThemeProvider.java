@@ -4,7 +4,7 @@
 
 package net.t0stbrot.soft.towercollector.providers;
 
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 
 import android.content.Context;
 

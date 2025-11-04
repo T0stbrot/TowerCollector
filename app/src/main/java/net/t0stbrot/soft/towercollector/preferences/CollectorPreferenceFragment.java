@@ -22,7 +22,7 @@ import androidx.preference.SwitchPreferenceCompat;
 
 import net.t0stbrot.soft.towercollector.CollectorService;
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.utils.GpsUtils;
 import net.t0stbrot.soft.towercollector.utils.PermissionUtils;
 import permissions.dispatcher.NeedsPermission;

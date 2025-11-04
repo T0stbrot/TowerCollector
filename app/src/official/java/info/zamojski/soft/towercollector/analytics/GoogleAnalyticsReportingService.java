@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-package info.zamojski.soft.towercollector.analytics;
+package net.t0stbrot.soft.towercollector.analytics;
 
 import android.app.Application;
 import android.os.Bundle;
@@ -11,13 +11,13 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.Map;
 
-import info.zamojski.soft.towercollector.BuildConfig;
-import info.zamojski.soft.towercollector.analytics.internal.Event;
-import info.zamojski.soft.towercollector.analytics.internal.Label;
-import info.zamojski.soft.towercollector.analytics.internal.Parameter;
-import info.zamojski.soft.towercollector.analytics.internal.UserProperty;
-import info.zamojski.soft.towercollector.enums.NetworkGroup;
-import info.zamojski.soft.towercollector.model.AnalyticsStatistics;
+import net.t0stbrot.soft.towercollector.BuildConfig;
+import net.t0stbrot.soft.towercollector.analytics.internal.Event;
+import net.t0stbrot.soft.towercollector.analytics.internal.Label;
+import net.t0stbrot.soft.towercollector.analytics.internal.Parameter;
+import net.t0stbrot.soft.towercollector.analytics.internal.UserProperty;
+import net.t0stbrot.soft.towercollector.enums.NetworkGroup;
+import net.t0stbrot.soft.towercollector.model.AnalyticsStatistics;
 
 public class GoogleAnalyticsReportingService implements IAnalyticsReportingService {
 

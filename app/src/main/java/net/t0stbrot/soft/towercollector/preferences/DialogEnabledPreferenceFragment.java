@@ -5,7 +5,7 @@
 package net.t0stbrot.soft.towercollector.preferences;
 
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.controls.DialogManager;
 
 import android.content.ActivityNotFoundException;

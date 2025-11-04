@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.io.filesystem.FileReader;
 import net.t0stbrot.soft.towercollector.io.filesystem.FileWriter;
 import net.t0stbrot.soft.towercollector.io.filesystem.ReadResult;

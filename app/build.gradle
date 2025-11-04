@@ -7,15 +7,15 @@ ext.rotEnabled = false
 apply plugin: 'com.android.application'
 
 android {
-    namespace 'info.zamojski.soft.towercollector'
+    namespace 'net.t0stbrot.soft.towercollector'
 
     defaultConfig {
-        applicationId "info.zamojski.soft.towercollector"
+        applicationId "net.t0stbrot.soft.towercollector"
         minSdkVersion 21
         targetSdkVersion 35
         compileSdk 35
         versionCode 2160018
-        versionName "2.16.0"
+        versionName "2.0.0-t0stbrot"
 
         vectorDrawables.useSupportLibrary = true
 

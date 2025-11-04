@@ -6,7 +6,7 @@ package net.t0stbrot.soft.towercollector.updater;
 
 import net.t0stbrot.soft.towercollector.MainActivity;
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.model.UpdateInfo;
 import net.t0stbrot.soft.towercollector.tasks.UpdateCheckAsyncTask;
 import net.t0stbrot.soft.towercollector.utils.NotificationHelperBase;

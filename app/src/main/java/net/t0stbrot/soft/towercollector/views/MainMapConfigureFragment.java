@@ -18,7 +18,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.jetbrains.annotations.NotNull;
 
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.events.MapEnabledChangedEvent;
 import net.t0stbrot.soft.towercollector.utils.MapUtils;
 import net.t0stbrot.soft.towercollector.utils.PermissionUtils;

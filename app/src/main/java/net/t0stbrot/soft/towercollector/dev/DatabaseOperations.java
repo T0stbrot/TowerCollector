@@ -19,7 +19,7 @@ import java.io.OutputStream;
 import java.util.zip.GZIPOutputStream;
 
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.dao.MeasurementsDatabase;
 import net.t0stbrot.soft.towercollector.io.filesystem.FileReader;
 import net.t0stbrot.soft.towercollector.io.filesystem.FileWriter;

@@ -4,7 +4,7 @@
 
 package net.t0stbrot.soft.towercollector.preferences;
 
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.controls.TrimmedEditTextPreference;
 import net.t0stbrot.soft.towercollector.utils.NetworkUtils;
 import net.t0stbrot.soft.towercollector.utils.OpenCellIdUtils;

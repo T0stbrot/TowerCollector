@@ -23,7 +23,7 @@ import java.util.List;
 
 import net.t0stbrot.soft.towercollector.CollectorService;
 import net.t0stbrot.soft.towercollector.MyApplication;
-import info.zamojski.soft.towercollector.R;
+import net.t0stbrot.soft.towercollector.R;
 import net.t0stbrot.soft.towercollector.analytics.IntentSource;
 import net.t0stbrot.soft.towercollector.enums.FileType;
 import net.t0stbrot.soft.towercollector.events.CollectorStartedEvent;
@@ -41,14 +41,14 @@ public class ExternalBroadcastReceiver extends BroadcastReceiver {
 
     private static final String quickBootPowerOnAction = "android.intent.action.QUICKBOOT_POWERON";
 
-    private static final String collectorStartAction = "info.zamojski.soft.towercollector.COLLECTOR_START";
-    private static final String collectorStopAction = "info.zamojski.soft.towercollector.COLLECTOR_STOP";
+    private static final String collectorStartAction = "net.t0stbrot.soft.towercollector.COLLECTOR_START";
+    private static final String collectorStopAction = "net.t0stbrot.soft.towercollector.COLLECTOR_STOP";
 
-    private static final String uploaderStartAction = "info.zamojski.soft.towercollector.UPLOADER_START";
-    public static final String UploaderStopAction = "info.zamojski.soft.towercollector.UPLOADER_STOP";
+    private static final String uploaderStartAction = "net.t0stbrot.soft.towercollector.UPLOADER_START";
+    public static final String UploaderStopAction = "net.t0stbrot.soft.towercollector.UPLOADER_STOP";
 
-    private static final String exportStartAction = "info.zamojski.soft.towercollector.EXPORT_START";
-    public static final String ExportStopAction = "info.zamojski.soft.towercollector.EXPORT_STOP";
+    private static final String exportStartAction = "net.t0stbrot.soft.towercollector.EXPORT_START";
+    public static final String ExportStopAction = "net.t0stbrot.soft.towercollector.EXPORT_STOP";
 
     @Override
     public void onReceive(Context context, Intent intent) {
