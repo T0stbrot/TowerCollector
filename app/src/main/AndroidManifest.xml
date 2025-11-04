@@ -141,12 +141,12 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="info.zamojski.soft.towercollector.COLLECTOR_START" />
-                <action android:name="info.zamojski.soft.towercollector.COLLECTOR_STOP" />
-                <action android:name="info.zamojski.soft.towercollector.UPLOADER_START" />
-                <action android:name="info.zamojski.soft.towercollector.UPLOADER_STOP" />
-                <action android:name="info.zamojski.soft.towercollector.EXPORT_START" />
-                <action android:name="info.zamojski.soft.towercollector.EXPORT_STOP" />
+                <action android:name="net.t0stbrot.soft.towercollector.COLLECTOR_START" />
+                <action android:name="net.t0stbrot.soft.towercollector.COLLECTOR_STOP" />
+                <action android:name="net.t0stbrot.soft.towercollector.UPLOADER_START" />
+                <action android:name="net.t0stbrot.soft.towercollector.UPLOADER_STOP" />
+                <action android:name="net.t0stbrot.soft.towercollector.EXPORT_START" />
+                <action android:name="net.t0stbrot.soft.towercollector.EXPORT_STOP" />
             </intent-filter>
         </receiver>
 
