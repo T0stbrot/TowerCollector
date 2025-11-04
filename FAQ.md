@@ -43,6 +43,3 @@ The diagnostic logging helps software developers to track down and fix errors. I
 The log file will be saved in 'TowerCollector' folder on the external memory (the same folder as exported files).
 
 **Remember to disable logging when you don't need it to avoid using all available space by the log files.**
-
-### Is Tower Collector an Open Source project?
-Since 2016 Tower Collector is an open source project developed and maintained mainly by me in my spare time. Source code is available on [GitHub](https://github.com/zamojski/TowerCollector/).
