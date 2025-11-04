@@ -111,9 +111,7 @@ public class ExportWorker extends Worker implements IProgressListener {
             FileGeneratorResult result = generator.generate();
             // send stats
             long endTime = System.currentTimeMillis();
-            AnalyticsStatistics stats = MeasurementsDatabase.getInstance(MyApplication.getApplication()).getAnalyticsStatistics();
             long duration = (endTime - startTime);
-            MyApplication.getAnalytics().sendExportFinishedTotal(duration, generator.getSubGenerators().size(), stats);
 
             Timber.d("doWork(): Showing result: %s", result);
 

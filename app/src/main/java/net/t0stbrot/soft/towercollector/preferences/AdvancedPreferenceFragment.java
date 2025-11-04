@@ -128,7 +128,6 @@ public class AdvancedPreferenceFragment extends DialogEnabledPreferenceFragment 
             CharSequence fileLoggingLevelLabel = fileLoggingLevelPreference.getEntry();
             Timber.d("onSharedPreferenceChanged(): User set file logging level = \"%s\"", fileLoggingLevelValue);
             fileLoggingLevelPreference.setSummary(formatValueString(R.string.preferences_file_logging_level_summary, fileLoggingLevelLabel));
-            requestLoggerChange();
         }
     }
 
@@ -142,18 +141,6 @@ public class AdvancedPreferenceFragment extends DialogEnabledPreferenceFragment 
             PreferenceCategory settingsCategoryPreference = findPreference(getString(R.string.preferences_advanced_category_settings_key));
             SwitchPreferenceCompat errorReportingSilentPreference = findPreference(getString(R.string.preferences_error_reporting_silent_key));
             settingsCategoryPreference.removePreference(errorReportingSilentPreference);
-        }
-    }
-
-    private void requestLoggerChange() {
-        Timber.d("requestLoggerChange(): Reinitializing logger");
-        Uri storageUri = MyApplication.getPreferencesProvider().getStorageUri();
-        if (StorageUtils.canWriteStorageUri(storageUri)) {
-            MyApplication.getApplication().initLogger();
-        } else {
-            if (!MyApplication.getPreferencesProvider().getFileLoggingLevel().equals(getString(R.string.preferences_file_logging_level_default_value))) {
-                StorageUtils.requestStorageUri(getActivity());
-            }
         }
     }
 

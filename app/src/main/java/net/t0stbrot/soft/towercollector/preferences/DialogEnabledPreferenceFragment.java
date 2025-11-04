@@ -29,7 +29,6 @@ public abstract class DialogEnabledPreferenceFragment extends PreferenceFragment
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 DialogManager.createHtmlInfoDialog(getActivity(), title, content, false, textIsSelectable).show();
-                MyApplication.getAnalytics().sendHelpDialogOpened(getString(preferenceKey));
                 return true;
             }
         });
@@ -58,7 +57,6 @@ public abstract class DialogEnabledPreferenceFragment extends PreferenceFragment
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 DialogManager.createHtmlInfoDialog(getActivity(), title, content, false, false).show();
-                MyApplication.getAnalytics().sendHelpDialogOpened(getString(preferenceKey));
                 return true;
             }
         });

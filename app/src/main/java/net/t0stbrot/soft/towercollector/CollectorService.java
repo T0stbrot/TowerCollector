@@ -291,7 +291,6 @@ public class CollectorService extends Service {
             externalBroadcastSender = new ExternalBroadcastSender();
             getExternalBroadcastSenderHandler().post(externalBroadcastSender);
         }
-        MyApplication.getAnalytics().sendPrefsNotifyMeasurementsCollected(notifyCollected);
 
         return START_REDELIVER_INTENT;
     }
@@ -359,7 +358,6 @@ public class CollectorService extends Service {
         AnalyticsStatistics stats = new AnalyticsStatistics();
         stats.setLocations(numberOfCollectedLocations);
         stats.setCells(numberOfCollectedCells);
-        MyApplication.getAnalytics().sendCollectorFinished(startIntentSource, transportMode.name(), apiVersionUsed, duration, stats, collectedCellTypes);
         super.onDestroy();
     }
 
@@ -383,7 +381,6 @@ public class CollectorService extends Service {
         String collectorApiVersion = MyApplication.getPreferencesProvider().getCollectorApiVersion();
         if (getString(R.string.preferences_collector_api_version_entries_value_auto).equals(collectorApiVersion)) {
             // auto detection
-            MyApplication.getAnalytics().sendPrefsCollectorApiVersion(0);
             if (MobileUtils.isNetMonsterCoreApiCompatible(MyApplication.getApplication())) {
                 registerNetMonsterListener();
             } else if (MobileUtils.isApi17FullyCompatible(MyApplication.getApplication())) {
@@ -393,15 +390,12 @@ public class CollectorService extends Service {
             }
         } else if (getString(R.string.preferences_collector_api_version_entries_value_api_netmonster).equals(collectorApiVersion)) {
             // API NetMonster Core forced
-            MyApplication.getAnalytics().sendPrefsCollectorApiVersion(100);
             registerNetMonsterListener();
         } else if (getString(R.string.preferences_collector_api_version_entries_value_api_17).equals(collectorApiVersion)) {
             // API 17 forced
-            MyApplication.getAnalytics().sendPrefsCollectorApiVersion(17);
             registerApi17PhoneStateListener();
         } else {
             // API 1 forced
-            MyApplication.getAnalytics().sendPrefsCollectorApiVersion(1);
             registerApi1PhoneStateListener();
         }
     }

@@ -32,6 +32,7 @@ import net.t0stbrot.soft.towercollector.analytics.internal.Label;
 import net.t0stbrot.soft.towercollector.dao.MeasurementsDatabase;
 import net.t0stbrot.soft.towercollector.enums.UploadResult;
 import net.t0stbrot.soft.towercollector.events.PrintMainWindowEvent;
+import net.t0stbrot.soft.towercollector.files.formatters.csv.CsvExportFormatter;
 import net.t0stbrot.soft.towercollector.files.formatters.csv.CsvUploadFormatter;
 import net.t0stbrot.soft.towercollector.files.formatters.csv.ICsvFormatter;
 import net.t0stbrot.soft.towercollector.files.formatters.json.IJsonFormatter;
@@ -143,7 +144,6 @@ public class UploaderWorker extends Worker implements IProgressListener {
                 return Result.failure(getMessageData(summary));
             }
 
-            AnalyticsStatistics startStats = MeasurementsDatabase.getInstance(MyApplication.getApplication()).getAnalyticsStatistics();
             long startTime = System.currentTimeMillis();
 
             // calculate number of upload parts
@@ -181,15 +181,6 @@ public class UploaderWorker extends Worker implements IProgressListener {
                 long endTime = System.currentTimeMillis();
                 long duration = (endTime - startTime);
                 String networkType = NetworkUtils.getNetworkType(MyApplication.getApplication());
-                AnalyticsStatistics endStats = MeasurementsDatabase.getInstance(MyApplication.getApplication()).getAnalyticsStatistics();
-                AnalyticsStatistics stats = new AnalyticsStatistics();
-                stats.setLocations(startStats.getLocations() - endStats.getLocations());
-                stats.setCells(startStats.getCells() - endStats.getCells());
-                stats.setDays(startStats.getDays() - endStats.getDays());
-                if (isOpenCellIdUploadEnabled)
-                    MyApplication.getAnalytics().sendUploadFinished(startIntentSource, networkType, duration, stats, OpenCellIdUtils.isApiKeyShared(ocidApiKey) ? Label.UploadOcidShared : Label.UploadOcid);
-                if (isMlsUploadEnabled)
-                    MyApplication.getAnalytics().sendUploadFinished(startIntentSource, networkType, duration, stats, isCustomMlsUploadEnabled ? Label.UploadCustomMls : Label.UploadMls);
             }
             String ocidMessage = getStringById(getMessage(ocidUploadResult));
             String ocidDescription = getStringById(getDescription(ocidUploadResult));
@@ -444,7 +435,7 @@ public class UploaderWorker extends Worker implements IProgressListener {
         if (measurements.isEmpty())
             return UploadResult.NoData;
         StringBuilder memoryFile = new StringBuilder();
-        ICsvFormatter formatter = new CsvUploadFormatter();
+        ICsvFormatter formatter = new CsvExportFormatter();
         // write measurements
         try {
             memoryFile.append(formatter.formatHeader());

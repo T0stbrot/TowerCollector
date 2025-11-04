@@ -30,10 +30,8 @@ public class DatabaseUpgradeTask {
             long startTime = System.currentTimeMillis();
             // one of below will trigger data migration if necessary (long operation)
             MeasurementsDatabase.getInstance(MyApplication.getApplication()).forceDatabaseUpgrade();
-            AnalyticsStatistics stats = MeasurementsDatabase.getInstance(MyApplication.getApplication()).getAnalyticsStatistics();
             long endTime = System.currentTimeMillis();
             long duration = (endTime - startTime);
-            MyApplication.getAnalytics().sendMigrationFinished(duration, oldDbVersion, stats);
         } catch (RuntimeException ex) {
             Timber.e(ex, "upgrade(): Database migration from version %s crashed", oldDbVersion);
             Toast.makeText(activity, "Database upgrade failed. Please clear app data or reinstall.", Toast.LENGTH_LONG).show();

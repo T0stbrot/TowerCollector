@@ -326,27 +326,6 @@ public class MeasurementsDatabase {
         return stats;
     }
 
-    public AnalyticsStatistics getAnalyticsStatistics() {
-        Timber.d("getAnalyticsStatistics(): Getting analytics stats");
-        AnalyticsStatistics stats = new AnalyticsStatistics();
-        SQLiteDatabase db = helper.getReadableDatabase();
-        // get all in one query (raw is the only possible solution)
-        String query = "SELECT * FROM (SELECT COUNT(" + CellSignalsTable.COLUMN_CELL_ID + ") AS TOTAL_CELLS_COUNT FROM " + CellSignalsTable.TABLE_NAME + ") JOIN (SELECT COUNT(*) AS TOTAL_LOCATIONS_COUNT, MIN(" + MeasurementsTable.COLUMN_MEASURED_AT + ") AS TOTAL_DAYS_MIN, MAX(" + MeasurementsTable.COLUMN_MEASURED_AT + ") AS TOTAL_DAYS_MAX FROM " + NotUploadedMeasurementsView.VIEW_NAME + ")";
-        // Log.d(query);
-        Cursor cursor = db.rawQuery(query, null);
-        if (cursor.moveToNext()) {
-            stats.setCells(cursor.getInt(cursor.getColumnIndex("TOTAL_CELLS_COUNT")));
-            stats.setLocations(cursor.getInt(cursor.getColumnIndex("TOTAL_LOCATIONS_COUNT")));
-            long minDate = cursor.getLong(cursor.getColumnIndex("TOTAL_DAYS_MIN"));
-            long maxDate = cursor.getLong(cursor.getColumnIndex("TOTAL_DAYS_MAX"));
-            int diff = (int) DateUtils.getTimeDiff(maxDate, minDate); // safe because return value is in days
-            stats.setDays(diff);
-        }
-        cursor.close();
-        Timber.d("getAnalyticsStatistics(): %s", stats);
-        return stats;
-    }
-
     public Boundaries getLocationBounds() {
         Timber.d("getLocationBounds(): Getting GPS bounds");
         Boundaries boundaries = null;
