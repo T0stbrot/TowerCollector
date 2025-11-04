@@ -38,7 +38,7 @@
         android:required="true" />
 
     <application
-        android:name="info.zamojski.soft.towercollector.net.zamojski.soft.towercollector.MyApplication"
+        android:name="net.t0stbrot.soft.towercollector.MyApplication"
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -73,11 +73,11 @@
             android:name="net.t0stbrot.soft.towercollector.PreferencesActivity"
             android:exported="false"
             android:label="@string/app_title_preferences"
-            android:parentActivityName="info.zamojski.soft.towercollector.net.zamojski.soft.towercollector.MainActivity">
+            android:parentActivityName="net.t0stbrot.soft.towercollector.MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="info.zamojski.soft.towercollector.net.zamojski.soft.towercollector.MainActivity" />
+                android:value="net.t0stbrot.soft.towercollector.MainActivity" />
         </activity>
 
         <service
