@@ -780,7 +780,6 @@ public class MainActivity extends AppCompatActivity
             deleteDialog.show();
         });
         builder.setOnCancelListener(dialog -> {
-            exportKeepAction();
             exportedFilePaths = null;
         });
 
@@ -812,7 +811,6 @@ public class MainActivity extends AppCompatActivity
                         newRecentAction = ExportAction.Keep;
                         positiveButton.setText(R.string.dialog_keep);
                         positiveButton.setOnClickListener(v -> {
-                            exportKeepAction();
                             dismissExportFinishedDialog(dialog);
                         });
                     }
@@ -914,8 +912,6 @@ public class MainActivity extends AppCompatActivity
             // pass screen on mode
             final String keepScreenOnMode = MyApplication.getPreferencesProvider().getCollectorKeepScreenOnMode();
             intent.putExtra(CollectorService.INTENT_KEY_KEEP_SCREEN_ON_MODE, keepScreenOnMode);
-            // pass analytics data
-            intent.putExtra(CollectorService.INTENT_KEY_START_INTENT_SOURCE, IntentSource.User);
             // start service
             ContextCompat.startForegroundService(this, intent);
             EventBus.getDefault().post(new CollectorStartedEvent(intent));
@@ -1191,7 +1187,7 @@ public class MainActivity extends AppCompatActivity
                             .putBoolean(UploaderWorker.INTENT_KEY_UPLOAD_TO_MLS, isMlsUploadEnabled)
                             .putBoolean(UploaderWorker.INTENT_KEY_UPLOAD_TO_CUSTOM_MLS, isCustomMlsUploadEnabled)
                             .putBoolean(UploaderWorker.INTENT_KEY_UPLOAD_TRY_REUPLOAD, isReuploadIfUploadFailsEnabled)
-                            .putString(UploaderWorker.INTENT_KEY_START_INTENT_SOURCE, IntentSource.User.name())
+
                             .build())
                     .addTag(UploaderWorker.WORKER_TAG)
                     .build();
@@ -1277,7 +1273,6 @@ public class MainActivity extends AppCompatActivity
                     WorkRequest exportWorkRequest = new OneTimeWorkRequest.Builder(ExportWorker.class)
                             .setInputData(new Data.Builder()
                                     .putStringArray(ExportWorker.SELECTED_FILE_TYPES, FileType.toNames(selectedFileTypes).toArray(new String[0]))
-                                    .putString(ExportWorker.INTENT_SOURCE, IntentSource.User.name())
                                     .build())
                             .addTag(ExportWorker.WORKER_TAG)
                             .build();
