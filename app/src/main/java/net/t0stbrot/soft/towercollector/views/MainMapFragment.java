@@ -90,7 +90,7 @@ public class MainMapFragment extends MainFragmentBase implements FollowMyLocatio
     public static final OnlineTileSourceBase TILE_SOURCE = new OnlineTileSourceBase(
             "T0stTiles",
             0,
-            16,
+            19,
             512,
             "",
             new String[]{"https://t0stbrot.net/api/public/tiles/"}
