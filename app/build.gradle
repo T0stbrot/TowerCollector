@@ -14,8 +14,8 @@ android {
         minSdkVersion 21
         targetSdkVersion 35
         compileSdk 35
-        versionCode 2160018
-        versionName "2.0.0-t0stbrot"
+        versionCode 2000001
+        versionName "2.0.1"
 
         vectorDrawables.useSupportLibrary = true
 
@@ -215,11 +215,4 @@ long getLastGitCommitTimestamp() {
         }
         return Long.parseLong(output.getStandardOutput().getAsText().get().trim()) * 1000
     }
-}
-
-apply plugin: 'com.google.gms.google-services'
-
-afterEvaluate {
-    tasks.matching { it.name.contains("GoogleServices") && !it.name.contains("Official") }*.enabled = false
-    println "Google Services plugin enabled for: " + tasks.matching { it.name.contains("GoogleServices") && it.enabled }*.name
 }
