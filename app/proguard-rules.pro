@@ -86,8 +86,6 @@
 -keep class android.support.v4.app.* { *; }
 -keep interface android.support.v4.app.* { *; }
 
-# Make sure that Firebase Analytics doesn't get removed
--keep class com.google.firebase.* { *; }
 
 #inherited -keepattributes *Annotation*
 
