@@ -31,7 +31,6 @@ public class GeneralPreferenceFragment extends DialogEnabledPreferenceFragment i
 
         changeStorageLocationPreference = findPreference(getString(R.string.preferences_change_storage_location_key));
 
-        setupUsageStatisticsAvailability();
         setupChangeStorageLocation();
     }
 
@@ -56,26 +55,6 @@ public class GeneralPreferenceFragment extends DialogEnabledPreferenceFragment i
             boolean isTrackingEnabled = sharedPreferences.getBoolean(key, trackingEnabledDefault);
             Timber.d("onSharedPreferenceChanged(): User set tracking enabled = %s", isTrackingEnabled);
         }
-    }
-
-    private void setupUsageStatisticsAvailability() {
-        boolean available = BuildConfig.ANALYTICS_AVAILABLE;
-        if (!available) {
-            PreferenceCategory settingsCategoryPreference = findPreference(getString(R.string.preferences_general_category_settings_key));
-            SwitchPreferenceCompat trackingPreference = findPreference(getString(R.string.preferences_tracking_enabled_key));
-            settingsCategoryPreference.removePreference(trackingPreference);
-
-            // We have only one help preference so the whole category is to be removed
-            PreferenceScreen generalScreenPreference = getPreferenceScreen();
-            PreferenceCategory helpCategoryPreference = findPreference(getString(R.string.preferences_general_category_help_key));
-            generalScreenPreference.removePreference(helpCategoryPreference);
-        } else {
-            setupUsageStatisticsDialog();
-        }
-    }
-
-    private void setupUsageStatisticsDialog() {
-        setupDialog(R.string.preferences_about_tracking_key, R.string.info_usage_statistics_title, R.raw.info_usage_statistics_content);
     }
 
     private void setupChangeStorageLocation() {
