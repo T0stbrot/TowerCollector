@@ -26,6 +26,8 @@ import org.jetbrains.annotations.NotNull;
 
 import net.t0stbrot.soft.towercollector.dao.MeasurementsDatabase;
 import net.t0stbrot.soft.towercollector.dev.DatabaseOperations;
+import net.t0stbrot.soft.towercollector.logging.ConsoleLoggingTree;
+import net.t0stbrot.soft.towercollector.logging.FileLoggingTree;
 import net.t0stbrot.soft.towercollector.providers.AppThemeProvider;
 import net.t0stbrot.soft.towercollector.providers.preferences.PreferencesProvider;
 import net.t0stbrot.soft.towercollector.utils.ExceptionUtils;
@@ -33,14 +35,18 @@ import net.t0stbrot.soft.towercollector.utils.HashUtils;
 
 import android.app.Application;
 import android.database.sqlite.SQLiteDatabaseCorruptException;
+import android.net.Uri;
 import android.os.Build;
 
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.DeadObjectException;
 import android.util.Log;
+import android.widget.Toast;
 
 import net.t0stbrot.soft.towercollector.utils.PermissionUtils;
+import net.t0stbrot.soft.towercollector.utils.StorageUtils;
+
 import timber.log.Timber;
 
 public class MyApplication extends Application {
@@ -66,7 +72,7 @@ public class MyApplication extends Application {
         application = this;
         // Logging to file is dependent on preferences but this will skip logging of initialization
         initPreferencesProvider();
-        initACRA();
+        initLogger();
         // Exception handling must be initialized after ACRA to obtain crash details
         initUnhandledExceptionHandler();
         initEventBus();
@@ -150,6 +156,40 @@ public class MyApplication extends Application {
         } catch (Throwable ignore) {
             return ex.toString();
         }
+    }
+
+    public void initLogger() {
+        // Default configuration
+        int consoleLogLevel = BuildConfig.DEBUG ? Log.VERBOSE : Log.INFO;
+        // File logging based on preferences
+        String fileLoggingLevelString = getPreferencesProvider().getFileLoggingLevel();
+        if (fileLoggingLevelString.equals(getString(R.string.preferences_file_logging_level_entries_value_disabled))) {
+            if (Timber.forest().contains(FileLoggingTree.INSTANCE)) {
+                Timber.uproot(FileLoggingTree.INSTANCE);
+            }
+        } else {
+            Uri storageUri = MyApplication.getPreferencesProvider().getStorageUri();
+            if (StorageUtils.canWriteStorageUri(storageUri)) {
+                int fileLogLevel = Log.ERROR;
+                if (fileLoggingLevelString.equals(getString(R.string.preferences_file_logging_level_entries_value_debug))) {
+                    fileLogLevel = Log.DEBUG;
+                } else if (fileLoggingLevelString.equals(getString(R.string.preferences_file_logging_level_entries_value_info))) {
+                    fileLogLevel = Log.INFO;
+                } else if (fileLoggingLevelString.equals(getString(R.string.preferences_file_logging_level_entries_value_warning))) {
+                    fileLogLevel = Log.WARN;
+                } else if (fileLoggingLevelString.equals(getString(R.string.preferences_file_logging_level_entries_value_error))) {
+                    fileLogLevel = Log.ERROR;
+                }
+                consoleLogLevel = Math.min(consoleLogLevel, fileLogLevel);
+                if (Timber.forest().contains(FileLoggingTree.INSTANCE)) {
+                    Timber.uproot(FileLoggingTree.INSTANCE);
+                }
+                Timber.plant(FileLoggingTree.INSTANCE.setPriority(fileLogLevel));
+            } else {
+                Toast.makeText(this, R.string.permission_logging_denied_temporarily_message, Toast.LENGTH_LONG).show();
+            }
+        }
+        Timber.plant(ConsoleLoggingTree.INSTANCE.setPriority(consoleLogLevel));
     }
 
     private void initEventBus() {

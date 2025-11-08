@@ -32,6 +32,7 @@ import android.telephony.SignalStrength;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -380,22 +381,29 @@ public class CollectorService extends Service {
     private void registerPhoneStateListener() {
         String collectorApiVersion = MyApplication.getPreferencesProvider().getCollectorApiVersion();
         if (getString(R.string.preferences_collector_api_version_entries_value_auto).equals(collectorApiVersion)) {
+            Log.d("TowerCollector", "Starting Listener Auto");
             // auto detection
             if (MobileUtils.isNetMonsterCoreApiCompatible(MyApplication.getApplication())) {
+                Log.d("TowerCollector", "Starting NetMonster Listener");
                 registerNetMonsterListener();
             } else if (MobileUtils.isApi17FullyCompatible(MyApplication.getApplication())) {
+                Log.d("TowerCollector", "Starting API17 Listener");
                 registerApi17PhoneStateListener();
             } else {
+                Log.d("TowerCollector", "Starting API1 Listener");
                 registerApi1PhoneStateListener();
             }
         } else if (getString(R.string.preferences_collector_api_version_entries_value_api_netmonster).equals(collectorApiVersion)) {
             // API NetMonster Core forced
+            Log.d("TowerCollector", "Starting NetMonster Listener");
             registerNetMonsterListener();
         } else if (getString(R.string.preferences_collector_api_version_entries_value_api_17).equals(collectorApiVersion)) {
             // API 17 forced
+            Log.d("TowerCollector", "Starting API17 Listener");
             registerApi17PhoneStateListener();
         } else {
             // API 1 forced
+            Log.d("TowerCollector", "Starting API1 Listener");
             registerApi1PhoneStateListener();
         }
     }

@@ -301,7 +301,7 @@ public class MainLastFragment extends MainFragmentBase implements View.OnLongCli
         lastMccValueTextView.setText((mainCell.getMcc() != Cell.UNKNOWN_CID ? String.format(locale, "%d", mainCell.getMcc()) : ""));
         lastMncValueTextView.setText(String.format(locale, "%d", mainCell.getMnc()));
         if (mainCell.getDbm() != Cell.UNKNOWN_SIGNAL) {
-            lastSignalStrengthValueTextView.setText(String.format(locale, getStringForLocale(R.string.main_last_signal_strength_value), mainCell.getDbm()));
+            lastSignalStrengthValueTextView.setText("RSSI: " + mainCell.getRssi() + "dBm | RSRP: " + mainCell.getRsrp() + "dBm");
         } else {
             lastSignalStrengthValueTextView.setText(getStringForLocale(R.string.main_signal_strength_not_available));
         }

@@ -42,6 +42,15 @@ android {
         develop {
             versionNameSuffix '-dev'
             dimension "environment"
+
+            def props = getCustomProperties("official")
+            def signFile = file(props['sign_storeFile'])
+            assert signFile.exists()
+
+            signingConfigs.official.storeFile signFile
+            signingConfigs.official.storePassword props['sign_storePassword']
+            signingConfigs.official.keyAlias props['sign_keyAlias']
+            signingConfigs.official.keyPassword props['sign_keyPassword']
         }
         production {
             dimension "environment"
